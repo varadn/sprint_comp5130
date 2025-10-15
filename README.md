@@ -1,4 +1,17 @@
-# React + TypeScript + Vite
+#Explanation of how the code was developed
+
+We built a search page for finding a room with a vertical navbar on the left-hand side. 
+
+We are using state variables in the App.tsx and SearchBar.component.tsx. The App is storing the user's query. The Searchbar stores the query as well, but it passes the query to the function it receives via props. 
+
+The Card element uses the props title, description, and imageURL. The Card Grid prop is an array of CardData, which is an interface of the props needed for the Card element. The Searchbar takes a function as a prop, which it runs when the user submits a query.
+
+With React, we didn't need to add each card individually, and we are now set up to dynamically add more cards by updating the data objects passed to the React components.
+
+
+This code was heavily generated with Co-Pilot. All components and App.tsx files were created with Claude's assistance, with some edits.
+
+## React + TypeScript + Vite
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
