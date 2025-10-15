@@ -1,4 +1,4 @@
-#Explanation of how the code was developed
+# Explanation of how the code was developed
 
 We built a search page for finding a room with a vertical navbar on the left-hand side. 
 
