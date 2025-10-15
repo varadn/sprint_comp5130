@@ -25,6 +25,21 @@ function App() {
       title: "Card 3",
       description: "This is the third card",
     },
+    {
+      id: 4,
+      title: "Card 4",
+      description: "This is the fourth card",
+    },
+    {
+      id: 5,
+      title: "Card 5",
+      description: "This is the fifth card",
+    },
+    {
+      id: 6,
+      title: "Card 6",
+      description: "This is the sixth card",
+    },
   ];
 
   const handleSearch = (query: string) => {
