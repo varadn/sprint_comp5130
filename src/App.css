@@ -34,6 +34,8 @@
   border-radius: 0.5rem;
   outline: none;
   transition: border-color 0.2s;
+  background-color: white;
+  color: black;
 }
 
 .search-input:focus {

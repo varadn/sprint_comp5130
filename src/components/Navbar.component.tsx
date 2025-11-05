@@ -13,11 +13,10 @@ function Navbar() {
       style={{
         height: "100vh",
         width: "220px",
-        background: "#222",
+        background: "#a27d4aff",
         color: "#fff",
         display: "flex",
         flexDirection: "column",
-        padding: "2rem 1rem",
         position: "fixed",
         top: 0,
         left: 0,
@@ -25,11 +24,13 @@ function Navbar() {
     >
       <h2
         style={{
-          paddingBottom: "4rem",
+          paddingTop: "2rem",
+          paddingBottom: "2rem",
           fontSize: "1.5rem",
           textAlign: "center",
           color: "#fff",
           backgroundColor: "#805227",
+          margin: 0,
         }}
       >
         MyApp
@@ -48,7 +49,7 @@ function Navbar() {
                 display: "block",
                 transition: "background 0.2s",
               }}
-              onMouseOver={(e) => (e.currentTarget.style.background = "#444")}
+              onMouseOver={(e) => (e.currentTarget.style.background = "#6f4a26ff")}
               onMouseOut={(e) =>
                 (e.currentTarget.style.background = "transparent")
               }
