@@ -1,61 +1,26 @@
-import React from "react";
+import { NavLink } from "react-router-dom";
 
 const navItems = [
   { label: "Home", href: "/" },
-  { label: "Login", href: "/about" },
-  { label: "Search", href: "/projects" },
-  { label: "Reserve", href: "/contact" },
+  { label: "Login", href: "/login" },
+  { label: "Search", href: "/search" },
+  { label: "Reserve", href: "/reserve" },
 ];
 
 function Navbar() {
   return (
-    <nav
-      style={{
-        height: "100vh",
-        width: "220px",
-        background: "#a27d4aff",
-        color: "#fff",
-        display: "flex",
-        flexDirection: "column",
-        position: "fixed",
-        top: 0,
-        left: 0,
-      }}
-    >
-      <h2
-        style={{
-          paddingTop: "2rem",
-          paddingBottom: "2rem",
-          fontSize: "1.5rem",
-          textAlign: "center",
-          color: "#fff",
-          backgroundColor: "#805227",
-          margin: 0,
-        }}
-      >
-        MyApp
-      </h2>
-      <ul style={{ listStyle: "none", padding: 0, margin: 0, flex: 1 }}>
+    <nav className="navbar" role="navigation" aria-label="Main Navigation">
+      <h2 className="navbar__title">StudyHere</h2>
+      <ul className="navbar__list">
         {navItems.map((item) => (
-          <li key={item.href} style={{ marginBottom: "1.5rem" }}>
-            <a
-              href={item.href}
-              style={{
-                color: "#fff",
-                textDecoration: "none",
-                fontSize: "1.1rem",
-                padding: "0.5rem 1rem",
-                borderRadius: "4px",
-                display: "block",
-                transition: "background 0.2s",
-              }}
-              onMouseOver={(e) => (e.currentTarget.style.background = "#6f4a26ff")}
-              onMouseOut={(e) =>
-                (e.currentTarget.style.background = "transparent")
-              }
+          <li key={item.href} className="navbar__item">
+            <NavLink
+              to={item.href}
+              end={item.href === "/"}
+              className={({ isActive }) => (isActive ? "nav-link nav-link--active" : "nav-link")}
             >
               {item.label}
-            </a>
+            </NavLink>
           </li>
         ))}
       </ul>

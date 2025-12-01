@@ -1,9 +1,12 @@
 import { useState } from "react";
+import { Route, Routes, Navigate } from "react-router-dom";
 import "./App.css";
 
 import Navbar from "./components/Navbar.component";
-import SearchBar from "./components/SearchBar.component";
-import CardGrid from "./components/CardGrid.component";
+import Home from "./pages/Home";
+import Login from "./pages/Login";
+import Search from "./pages/Search";
+import Reserve from "./pages/Reserve";
 
 function App() {
   const [searchQuery, setSearchQuery] = useState("");
@@ -47,13 +50,21 @@ function App() {
     // Add your search logic here
   };
 
+  // Home component is extracted to `src/pages/Home.tsx` and receives cards and onSearch
+
   return (
     <div className="app">
       <Navbar />
-      <div className="container">
-        <SearchBar onSearch={handleSearch} />
-        <CardGrid cards={cardData} />
-      </div>
+      <Routes>
+        <Route path="/" element={<Home cards={cardData} onSearch={handleSearch} />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/search" element={<Search />} />
+        <Route path="/reserve" element={<Reserve/>} />
+        {/* Example extra paths: replace with your actual pages when created */}
+        {/* <Route path="/search" element={<SearchResults />} /> */}
+        {/* Redirect unknown paths back to home */}
+        <Route path="*" element={<Navigate replace to="/" />} />
+      </Routes>
     </div>
   );
 }
