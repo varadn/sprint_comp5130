@@ -9,7 +9,7 @@ import Search from "./pages/Search";
 import Reserve from "./pages/Reserve";
 
 function App() {
-  const [searchQuery, setSearchQuery] = useState("");
+  const [, setSearchQuery] = useState("");
 
   // Sample card data - replace with your actual data
   const cardData = [
