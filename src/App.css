@@ -254,6 +254,143 @@
   color: white;
 }
 
+/* Card Detail Page styles */
+.card-detail-page {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  min-height: calc(100vh - 40px);
+  padding: 2rem 1rem;
+}
+
+.card-detail-container {
+  width: 100%;
+  max-width: 900px;
+}
+
+.back-button {
+  background: none;
+  border: none;
+  color: #805227;
+  font-size: 1.1rem;
+  cursor: pointer;
+  padding: 0.5rem 0;
+  margin-bottom: 1.5rem;
+  transition: color 0.2s;
+  font-weight: 600;
+}
+
+.back-button:hover {
+  color: #6f4a26;
+}
+
+.card-detail {
+  background: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.card-detail-image {
+  width: 100%;
+  height: 400px;
+  overflow: hidden;
+}
+
+.card-detail-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-detail-content {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.card-detail-title {
+  margin: 0 0 1.5rem;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #2d3748;
+}
+
+.card-detail-section {
+  margin-bottom: 2rem;
+}
+
+.card-detail-section h3 {
+  margin: 0 0 0.75rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #805227;
+}
+
+.card-detail-description {
+  margin: 0;
+  color: #4a5568;
+  line-height: 1.6;
+}
+
+.card-detail-actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: auto;
+}
+
+.btn-reserve {
+  flex: 1;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.not-found {
+  background: white;
+  border-radius: 0.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  padding: 3rem;
+  text-align: center;
+}
+
+.not-found h2 {
+  color: #2d3748;
+  margin-bottom: 0.5rem;
+}
+
+.not-found p {
+  color: #4a5568;
+}
+
+/* Make card clickable on hover */
+.card {
+  cursor: pointer;
+}
+
+/* Small screens: adjust card detail layout */
+@media (max-width: 768px) {
+  .card-detail {
+    grid-template-columns: 1fr;
+  }
+
+  .card-detail-image {
+    height: 300px;
+  }
+
+  .card-detail-content {
+    padding: 1.5rem;
+  }
+
+  .card-detail-title {
+    font-size: 1.5rem;
+  }
+}
+
 /* Small screens: keep the card comfortable within the viewport */
 @media (max-width: 480px) {
   .login-card {

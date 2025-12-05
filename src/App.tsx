@@ -7,6 +7,7 @@ import Home from "./pages/Home";
 import Login from "./pages/Login";
 import Search from "./pages/Search";
 import Reserve from "./pages/Reserve";
+import CardDetail from "./pages/CardDetail";
 
 function App() {
   const [, setSearchQuery] = useState("");
@@ -57,6 +58,7 @@ function App() {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home cards={cardData} onSearch={handleSearch} />} />
+        <Route path="/card/:id" element={<CardDetail cards={cardData} />} />
         <Route path="/login" element={<Login />} />
         <Route path="/search" element={<Search />} />
         <Route path="/reserve" element={<Reserve/>} />

@@ -18,6 +18,7 @@ function CardGrid({ cards }: CardGridProps): React.ReactElement {
       {cards.map((card) => (
         <Card
           key={card.id}
+          id={card.id}
           title={card.title}
           description={card.description}
           imageUrl={card.imageUrl}
