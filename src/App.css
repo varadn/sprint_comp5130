@@ -272,7 +272,7 @@
   background: none;
   border: none;
   color: #805227;
-  font-size: 1.1rem;
+  font-size: 1rem;
   cursor: pointer;
   padding: 0.5rem 0;
   margin-bottom: 1.5rem;
@@ -326,7 +326,7 @@
 
 .card-detail-section h3 {
   margin: 0 0 0.75rem;
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 600;
   color: #805227;
 }
@@ -370,6 +370,14 @@
 /* Make card clickable on hover */
 .card {
   cursor: pointer;
+}
+
+/* No results message */
+.no-results {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: #4a5568;
+  font-size: 1rem;
 }
 
 /* Small screens: adjust card detail layout */

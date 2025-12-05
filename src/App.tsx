@@ -10,7 +10,7 @@ import Reserve from "./pages/Reserve";
 import CardDetail from "./pages/CardDetail";
 
 function App() {
-  const [, setSearchQuery] = useState("");
+  const [searchQuery, setSearchQuery] = useState("");
 
   // Sample card data - replace with your actual data
   const cardData = [
@@ -46,9 +46,17 @@ function App() {
     },
   ];
 
+  // Filter cards based on search query
+  const filteredCards = cardData.filter((card) => {
+    const query = searchQuery.toLowerCase();
+    return (
+      card.title.toLowerCase().includes(query) ||
+      card.description.toLowerCase().includes(query)
+    );
+  });
+
   const handleSearch = (query: string) => {
     setSearchQuery(query);
-    // Add your search logic here
   };
 
   // Home component is extracted to `src/pages/Home.tsx` and receives cards and onSearch
@@ -57,7 +65,7 @@ function App() {
     <div className="app">
       <Navbar />
       <Routes>
-        <Route path="/" element={<Home cards={cardData} onSearch={handleSearch} />} />
+        <Route path="/" element={<Home cards={filteredCards} onSearch={handleSearch} />} />
         <Route path="/card/:id" element={<CardDetail cards={cardData} />} />
         <Route path="/login" element={<Login />} />
         <Route path="/search" element={<Search />} />

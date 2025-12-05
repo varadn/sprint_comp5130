@@ -18,7 +18,13 @@ function Home({ cards, onSearch }: HomeProps): React.ReactElement {
   return (
     <div className="container">
       <SearchBar onSearch={onSearch} />
-      <CardGrid cards={cards} />
+      {cards.length === 0 ? (
+        <div className="no-results">
+          <p>No study rooms found matching your search. Try different keywords!</p>
+        </div>
+      ) : (
+        <CardGrid cards={cards} />
+      )}
     </div>
   );
 }
